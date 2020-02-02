@@ -1,0 +1,37 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class score : MonoBehaviour {
+    private float sco;
+    public Text text;
+    public int total;
+    private int count;
+    // Use this for initialization
+	void Start () {
+
+        sco = 0;
+        count = 2;
+	}
+	
+	// Update is called once per frame
+	void Update () {
+     
+        
+      
+            Point();
+        
+           
+      
+	}
+    public void Point()
+    {
+        sco += Time.deltaTime;
+            total = (int)sco;
+            text.text = "Score : " + total * count ;
+
+    }
+  
+    
+}
